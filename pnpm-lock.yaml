@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@fontsource/quicksand':
+    specifier: ^5.0.7
+    version: 5.0.7
   clsx:
     specifier: ^1.1.1
     version: 1.2.1
@@ -334,6 +337,10 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@fontsource/quicksand@5.0.7:
+    resolution: {integrity: sha512-7asJ/M+iGpRuBjO0N4Fl4hEVUlRWW2HDVT719B0CJLHLx3Y6/pTz8cmtPk/2nDh6jHJ0x+kSplkrPCsOt1S+Rw==}
+    dev: false
 
   /@humanwhocodes/config-array@0.5.0:
     resolution: {integrity: sha512-FagtKFz74XrTl7y6HCzQpwDfXP0yhxe9lHLD1UZxjvZIcbyRz8zTFF/yYNfSfzU414eDwZ1SrO0Qvtyf+wFMQg==}

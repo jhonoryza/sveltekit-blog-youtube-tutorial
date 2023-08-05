@@ -6,7 +6,7 @@ date: '2023-08-05 17:20:00'
 Kali ini kita akan melakukan deployment menggunakan tools `Deployer` ke server ubuntu
 
 ## Syarat
-- Server sudah tersetup, jika belum bisa cek tutorial [ini](./ansible-setup-ubuntu-20-04) atau [ini](./setup-ubuntu-20-04)
+- Server sudah tersetup, jika belum bisa cek tutorial [ini](./setup-ubuntu-20-04-ansible) atau [ini](./setup-ubuntu-20-04-manual)
 
 ## deploy preparation
 1. buat directory baru di /var/www `sudo -uwww-data mkdir -p shared`
