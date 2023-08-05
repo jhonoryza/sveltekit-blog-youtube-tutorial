@@ -31,8 +31,8 @@ export const posts = Object.entries(import.meta.glob('/posts/**/*.md', { eager: 
       date: post.metadata.date
         ? format(
             // offset by timezone so that the date is correct
-            addTimezoneOffset(new Date(post.metadata.date)),
-            'yyyy-MM-dd'
+            (new Date(post.metadata.date)),
+            'yyyy-MM-dd hh:mm:ss'
           )
         : undefined,
 

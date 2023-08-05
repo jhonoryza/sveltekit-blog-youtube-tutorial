@@ -22,6 +22,9 @@
     <time datetime={post.date}>
       {format(new Date(parseISO(post.date)), 'MMMM d, yyyy')}
     </time>
+    <time datetime={post.date}>
+      {format(new Date(parseISO(post.date)), 'h:mm aaa')}
+    </time>
     {#if collapsed}
       <span class="mx-1">•</span>
     {/if}
