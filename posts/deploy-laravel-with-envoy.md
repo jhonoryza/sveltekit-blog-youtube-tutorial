@@ -135,6 +135,6 @@ VITE_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 ```
 
 ## Proses Deployment
-1. in local run ./vendor/bin/envoy run deploy
-2. generate app key `php artisan key:generate` in folder /var/www/source
-3. penyesuaian folder permission `chown -R www-data: /var/www/`
+1. jalankan perintah `./vendor/bin/envoy run deploy`
+2. generate app key dengan menjalankan perintah `php artisan key:generate` di folder /var/www/source
+3. penyesuaian folder permission dengan perintah `chown -R www-data: /var/www/`

@@ -166,5 +166,5 @@ before('deploy:success', 'restart:services');
 ```
 
 ## Proses Deployment
-1. run `./vendor/bin/dep deploy production`
-2. run `php artisan key:generate` di folder /var/www/app/current
+1. jalankan perinta `./vendor/bin/dep deploy production`
+2. jalankan perinta `php artisan key:generate` di folder /var/www/app/current
