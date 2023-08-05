@@ -8,15 +8,13 @@ Kali ini kita akan melakukan deployment menggunakan tools `Laravel Envoy` ke ser
 ## Syarat
 - Server sudah tersetup, jika belum bisa cek tutorial [ini](./ansible-setup-ubuntu-20-04) atau [ini](./setup-ubuntu-20-04)
 
-## Setup Server
-- check this [https://gist.github.com/jhonoryza/16b65d4f6e7f7dceb084203142e4e2af](https://gist.github.com/jhonoryza/16b65d4f6e7f7dceb084203142e4e2af)
+## Persiapan sebelum deployment
+1. buat directory baru di /var/www `-uwww-data mkdir -p storage/framework/sessions`
+2. buat directory baru di /var/www `-uwww-data mkdir -p storage/framework/views`
+3. buat directory baru di /var/www `-uwww-data mkdir -p storage/framework/cache`
+4. buat file .env di /var/www `-uwww-data touch .env`
 
-## deploy preparation
-1. create new directory in /var/www `-uwww-data mkdir -p storage/framework/sessions`
-2. create new directory in /var/www `-uwww-data mkdir -p storage/framework/views`
-3. create new directory in /var/www `-uwww-data mkdir -p storage/framework/cache`
-4. create .env in /var/www `-uwww-data touch .env`
-```
+```bash
 APP_NAME=envoyapp
 APP_ENV=production
 APP_KEY=
@@ -78,8 +76,9 @@ VITE_PUSHER_SCHEME="${PUSHER_SCHEME}"
 VITE_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 ```
 
-### create Envoy.blade.php in root laravel dir
-```
+5. buat file `Envoy.blade.php` di root laravel directory
+
+```php
 @servers(['production' => ['root@serve-ip-address']])
  
 @setup
@@ -135,11 +134,7 @@ VITE_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 @endtask
 ```
 
-### deploy
-in local run ./vendor/bin/envoy run deploy
-
-### generate key app
-`php artisan key:generate` in folder /var/www/source
-
-### adjust permission folder
-`chown -R www-data: /var/www/`
+## Proses Deployment
+1. in local run ./vendor/bin/envoy run deploy
+2. generate app key `php artisan key:generate` in folder /var/www/source
+3. penyesuaian folder permission `chown -R www-data: /var/www/`
