@@ -17,11 +17,13 @@
   <!-- bio -->
   <section class="flex flex-col items-center gap-16 pt-8 pb-16">
     <div class="flex flex-col items-center w-full gap-6 rounded-lg">
+      {#if avatar}
       <img
         src={avatar}
         alt={name}
         class="mx-auto rounded-full w-36 h-36 ring-2 ring-zinc-200 dark:ring-zinc-700"
       />
+      {/if}
       <div class="flex gap-6">
         <SocialLinks />
       </div>

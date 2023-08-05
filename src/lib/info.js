@@ -10,7 +10,7 @@ export const lastName = 'Tutorial'
 export const name = `${firstName} ${lastName}`
 
 // Used for the landing page & footer of posts
-export const avatar = 'https://picsum.photos/id/203/250/250'
+export const avatar = ''
 export const bio = `\
 🇮🇩 Selamat Belajar 😎
 `

@@ -19,12 +19,16 @@
     </span>
   {/if}
   <div class="flex" class:flex-col={!collapsed}>
-    <time datetime={post.date}>
-      {format(new Date(parseISO(post.date)), 'MMMM d, yyyy')}
-    </time>
-    <time datetime={post.date}>
-      {format(new Date(parseISO(post.date)), 'h:mm aaa')}
-    </time>
+    <div class="pr-2">
+      <time datetime={post.date}>
+        {format(new Date(parseISO(post.date)), 'MMMM d, yyyy')}
+      </time>
+    </div>
+    <div>
+      <time datetime={post.date}>
+        {format(new Date(parseISO(post.date)), 'h:mm aaa')}
+      </time>
+    </div>
     {#if collapsed}
       <span class="mx-1">•</span>
     {/if}
