@@ -9,7 +9,8 @@ Kali ini kita akan membuat konfigurasi `ci/cd pada gitlab.com` untuk aplikasi la
 1. sudah melakukan setup server seperti yg dijelaskan [article ini](./setup-ubuntu-20-04-ansible)
 2. sudah melakukan konfigurasi laravel envoy seperti yg dijelaskan [article ini](./deploy-laravel-with-envoy)
 3. tambahkan `SSH_PRIVATE_KEY` pada repository yang digunakan di menu `settings -> ci/cd -> variables`
-4. buat file baru `.gitlab-ci.yml` di laravel app root directory dan tambahkan konfigurasi dibawah:
+4. dilocal bisa lihat file ini `cat ~/.ssh/id_rsa`
+5. buat file baru `.gitlab-ci.yml` di laravel app root directory dan tambahkan konfigurasi dibawah:
 
 ```bash
 stages:
@@ -36,7 +37,8 @@ Setial kali ada push code push ke branch master maka proses ci/cd akan berjalan
 1. sudah melakukan setup server seperti yg dijelaskan [article ini](./setup-ubuntu-20-04-ansible)
 2. sudah melakukan konfigurasi laravel menggunakan deployer seperti yg dijelaskan [article ini](./deploy-laravel-with-deployer)
 3. tambahkan `SSH_PRIVATE_KEY` pada repository yang digunakan di menu `settings -> ci/cd -> variables`
-4. buat file baru `.gitlab-ci.yml` di laravel app root directory dan tambahkan konfigurasi dibawah:
+4. dilocal bisa lihat file ini `cat ~/.ssh/id_rsa`
+5. buat file baru `.gitlab-ci.yml` di laravel app root directory dan tambahkan konfigurasi dibawah:
 
 ```
 stages:
