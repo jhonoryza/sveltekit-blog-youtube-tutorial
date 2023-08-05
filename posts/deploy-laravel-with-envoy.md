@@ -1,6 +1,6 @@
 ---
 title: 'Deploy Aplikasi Laravel Menggunakan Tools Laravel Envoy'
-date: '2023-08-05 17:20:00'
+date: '2023-08-05 17:30:00'
 ---
 
 Kali ini kita akan melakukan deployment menggunakan tools `Laravel Envoy` ke server ubuntu
