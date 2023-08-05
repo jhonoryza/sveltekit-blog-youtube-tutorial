@@ -3,7 +3,7 @@ title: 'Belajar Nginx Proxy Manager'
 date: '2023-08-05 13:00:00'
 ---
 
-Kali ini kita akan menjalankan nginx proxy manager menggunakan docker.
+Kali ini kita akan menjalankan `nginx proxy manager` menggunakan `docker`.
 
 ## Syarat
 - sudah terinstall docker dan docker-compose. [referensi cara install](https://docs.docker.com/engine/install/)

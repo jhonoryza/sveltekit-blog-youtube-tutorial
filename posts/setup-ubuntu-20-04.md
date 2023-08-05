@@ -3,7 +3,7 @@ title: 'Setup VPS Linux Server Ubuntu 20.04 LTS untuk aplikasi Laravel secara ma
 date: '2023-08-05 17:00:00'
 ---
 
-Kali ini kita akan menjelaskan bagaimana cara setup ubuntu server 20.04 secara manual agar dapat menjalankan aplikasi laravel
+Kali ini kita akan menjelaskan bagaimana cara setup ubuntu server 20.04 secara `manual` agar dapat menjalankan aplikasi laravel
 
 # operating system
 `Ubuntu 20.04 LTS`

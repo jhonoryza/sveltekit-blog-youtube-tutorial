@@ -3,7 +3,7 @@ title: 'Belajar Cara Backup dan Restore Docker Volume yang simple'
 date: '2023-08-05 16:00:00'
 ---
 
-Kali ini kita akan mempelajari cara membackup dan merestore docker volume, hal ini akan sangat berguna ketika kita memiliki data2 yang sangat penting dan diperlukan backup.
+Kali ini kita akan mempelajari cara `membackup` dan `merestore` `docker volume`, hal ini akan sangat berguna ketika kita memiliki data2 yang sangat penting dan diperlukan backup.
 
 Contoh kali ini kita akan membackup docker volume dari aplikasi vaultwarden lalu kita simpan ke MinIO server
 
