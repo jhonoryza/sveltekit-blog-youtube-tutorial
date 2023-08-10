@@ -7,13 +7,6 @@ Kali ini kita akan setup dns server menggunakan bind9.
 
 ## Syarat
 - sudah install [cloudflare dns over https](./cloudflare-dns-over-https)
-- ubah port container cloudflared menggunakan port 5054 seperti ini:
-
-```YAML
-ports:
-    - "5054:5054/tcp"
-    - "5054:5054/udp"
-```
 
 ## Mulai
 - buat file `docker-compose.yml`
@@ -37,10 +30,10 @@ services:
       - ./records:/var/lib/bind
     restart: unless-stopped
     networks:
-      - dockerfile-cloudflared_cloudflared_net
+      - cloudflare_net
 
 networks:
-  dockerfile-cloudflared_cloudflared_net:
+  cloudflare_net:
     external: true
 ```
 
@@ -95,6 +88,10 @@ traefik        IN      A       192.168.18.106
 - ubah ip address `192.168.18.106` dengan ip address dimana bind9 ini akan di jalankan
 - ubah `domainku.dev` dengan nama domain kesukaan kalian
 - jalankan `docker-compose up -d` atau `docker compose up -d`
+
+- matikan systemd-resolved.service dengan cara run `sudo systemctl stop systemd-resolved.service` dan disable `sudo systemctl disable systemd-resolved.service`
+
+- arahkan device yg akan diubah dns nya ke alamat ip dimana service tersebut dijalankan, contohnya service diatas saya running di laptop/pc dengan ip: 192.168.18.106 maka ubah pengaturan DNS menggunakan ip 192.168.18.106
 
 ## testing dns
 
