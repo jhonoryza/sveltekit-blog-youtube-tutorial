@@ -6,6 +6,7 @@
   import { browser } from '$app/environment'
   import { name } from '$lib/info'
   import { page } from '$app/stores'
+  import SocialLinks from '$lib/components/SocialLinks.svelte'
 
   let isDarkMode = browser ? Boolean(document.documentElement.classList.contains('dark')) : true
 
@@ -49,6 +50,8 @@
         <MoonIcon class="hidden text-zinc-500 dark:block" />
         <SunIcon class="block text-zinc-400 dark:hidden" />
       </button>
+      <SocialLinks />
+
     </header>
     <main
       class="flex flex-col flex-grow w-full mx-auto"
