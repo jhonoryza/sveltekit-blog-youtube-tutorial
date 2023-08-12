@@ -43,7 +43,9 @@ export const posts = Object.entries(import.meta.glob('/posts/**/*.md', { eager: 
       },
 
       // get estimated reading time for the post
-      readingTime: readingTime(html.structuredText).text
+      readingTime: readingTime(html.structuredText).text,
+
+      content: post.default.render().html
     }
   })
   // sort by date
@@ -55,7 +57,3 @@ export const posts = Object.entries(import.meta.glob('/posts/**/*.md', { eager: 
     previous: allPosts[index + 1]
   }))
 
-function addTimezoneOffset(date) {
-  const offsetInMilliseconds = new Date().getTimezoneOffset() * 60 * 1000
-  return new Date(new Date(date).getTime() + offsetInMilliseconds)
-}
