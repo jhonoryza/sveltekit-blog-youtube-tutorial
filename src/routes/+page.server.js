@@ -9,14 +9,14 @@ export async function load(params) {
   let search = params.url.searchParams.get('search')
   page = search ? 1 : page
 
-  console.log(params)
-  console.log('sebelum ' +posts.length)
+  // console.log(params)
+  // console.log('sebelum ' +posts.length)
   const filtered = search ?
     posts.filter((post) => {
       return ( post.title.toLowerCase().indexOf(search) > -1 )
     }) : posts;
   const postsForPage = paginate(filtered, { limit, page })
-  console.log('sesudah ' +filtered.length)
+  // console.log('sesudah ' +filtered.length)
 
   // if page doesn't exist, 404
   if (postsForPage.length === 0 && page > 1) {
