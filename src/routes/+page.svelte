@@ -1,5 +1,4 @@
 <script>
-  import { goto } from '$app/navigation'
   import ArrowLeftIcon from '$lib/components/ArrowLeftIcon.svelte'
   import ArrowRightIcon from '$lib/components/ArrowRightIcon.svelte'
   import PostsList from '$lib/components/PostsList.svelte'
