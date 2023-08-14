@@ -1,6 +1,6 @@
 ---
 title: 'Cara integrasi samba diproxmox'
-date: '2023-08-10 14:58:00'
+date: '2023-08-15 14:58:00'
 ---
 
 Kali ini kita akan setup samba di proxmox menggunakan storage type directory.
