@@ -81,7 +81,7 @@ entryPoints:
   websecure:
     address: :443
 
-serverTransport:
+serversTransport:
   insecureSkipVerify: true
 
 # certificatesResolvers:
