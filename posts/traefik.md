@@ -5,6 +5,8 @@ date: '2023-08-10 22:38:00'
 
 Kali ini kita akan setup traefik sebagai reverse proxy menggunakan docker.
 
+## Required
+
 - pertama buat file `docker-compose.yml` isinya seperti ini:
 
 ```YAML
@@ -108,3 +110,52 @@ providers:
 
 - jalankan `docker-compose up -d` maka traefik bisa dibuka pada url `http://traefik.local.domain.site`
 - tentunya dengan catatan domain tersebut sudah di daftarkan di dns server
+
+## Optional
+
+jika kita membutuhkan reverse proxy ke service lain, misal service lain tsb berada di server yang berbeda, maka kita bisa menambahkan konfigurasi static di traefik, contohnya disini saya akan membuat file `config/config.yaml` dimana di sini kita akan mengarahkan ke server yang berbeda untuk aplikasi proxmox
+
+```YAML
+http:
+  routers:
+    proxmox-http:
+      entrypoints:
+        - web
+      rule: "Host(`proxmox.local.domain.site`)"
+      service: proxmox-service
+      middlewares:
+        - https-redirect
+    proxmox-https:
+      entrypoints:
+        - websecure
+      rule: "Host(`proxmox.local.domain.site`)"
+      service: proxmox-service
+      tls: {}
+      middlewares:
+        - default-headers
+
+  services:
+    proxmox-service:
+      loadBalancer:
+        servers:
+          - url: "https://192.168.18.107:8006/"
+        passHostHeader: true
+
+  middlewares:
+    https-redirect:
+      redirectScheme:
+        scheme: https
+    default-headers:
+      headers:
+        frameDeny: true
+        sslRedirect: true
+        browserXssFilter: true
+        contentTypeNosniff: true
+        forceSTSHeader: true
+        stsIncludeSubdomains: true
+        stsPreload: true
+        stsSeconds: 15552000
+        customFrameOptionsValue: SAMEORIGIN
+        customRequestHeaders:
+          X-Forwarder-Proto: https
+```
