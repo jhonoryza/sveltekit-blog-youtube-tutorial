@@ -37,3 +37,11 @@ networks:
 2. jalankan perintah `docker compose up -d` atau `docker-compose up -d`
 3. lalu nginx proxy manager sudah bisa diakses pada url: http://localhost:81
 4. selesai
+
+
+Default Admin User:
+
+```YAML
+Email:    admin@example.com
+Password: changeme
+```
