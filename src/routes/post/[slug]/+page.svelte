@@ -60,7 +60,7 @@
       <svelte:element
         this={canGoBack ? 'button' : 'a'}
         class="items-center justify-center hidden w-10 h-10 mb-8 transition bg-white rounded-full shadow-md -top-1 -left-16 lg:flex group shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 dark:focus-visible:ring-2 dark:ring-white/10 dark:hover:border-zinc-700 dark:hover:ring-white/20"
-        href={canGoBack ? undefined : '/posts'}
+        href={canGoBack ? undefined : '/'}
         aria-label="Go back to posts"
         on:click={goBack}
         on:keydown={goBack}
@@ -84,7 +84,7 @@
       </header>
 
       <!-- render the post -->
-      <div class="prose dark:prose-invert ">
+      <div class="prose dark:prose-invert">
         <svelte:component this={data.component} />
       </div>
     </article>
@@ -99,11 +99,11 @@
         <div class="flex justify-center order-2 md:order-1 md:col-span-2">
           <a href="/" class="inline-block rounded-full">
             {#if avatar}
-            <img
-              src={avatar}
-              alt={name}
-              class="w-24 h-24 mx-auto rounded-full md:w-28 md:h-28 ring-2 ring-zinc-200 dark:ring-zinc-700"
-            />
+              <img
+                src={avatar}
+                alt={name}
+                class="w-24 h-24 mx-auto rounded-full md:w-28 md:h-28 ring-2 ring-zinc-200 dark:ring-zinc-700"
+              />
             {/if}
           </a>
         </div>
