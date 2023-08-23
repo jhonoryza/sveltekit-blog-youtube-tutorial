@@ -48,7 +48,7 @@ volumes:
 ```
 
 2. jalankan perintah `docker compose up -d` atau `docker-compose up -d`
-3. lalu nginx proxy manager sudah bisa diakses pada url: http://localhost:8200
+3. lalu vaultwarden sudah bisa diakses pada url: http://localhost:8200
 4. lalu teman2 bisa registrasi dan jangan lupa master password jangan sampe lupa, kalau bisa dicatat dan jangan sampai hilang karena password tersebut tidak bisa direset 🤣.
 5. untuk akses dari hp android/ios/desktop/browser extension, temen2 bisa download aplikasi bitwarden [https://bitwarden.com/download/](https://bitwarden.com/download/)
 6. setelah terinstall buka aplikasi -> jangan dulu login, cari settings -> masukan server url http://localhost:8200 -> save

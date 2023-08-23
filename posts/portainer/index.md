@@ -14,7 +14,7 @@ Kali ini kita akan menjalankan `portainer` menggunakan `docker`.
 ```YAML
 version: "3"
 services:
-  apps:
+  portainer:
     image: portainer/portainer-ce:latest
     container_name: portainer
     restart: unless-stopped
