@@ -3,6 +3,21 @@ title: 'Belajar Vaultwarden'
 date: '2023-08-05 13:30:00'
 ---
 
+password manager
+
+kenapa perlu nya aplikasi password management:
+- akun di beberapa platform seperti github, gitlab, bitbucket google dsb
+- catatan rahasia mengenai credential akses server dsb
+- selama ini simpan di catatan offline atau cloud pihak ke 3
+- ada proses copy paste / ketik secara manual
+
+hal yg menarik dari bitwarden:
+- pengisian credential lebih mudah
+- bisa jalankan bitwarden di home sever (self hosted)
+- bisa simpan catatan rahasia selain login credential
+- bitwarden di buat menggunakan java
+- ada alternative versi yg dibuat menggunakan rust: vaultwarden
+
 Kali ini kita akan mempelajari cara install vaultwarden yang berguna sebagai private password manager kita menggunakan docker.
 
 ## Syarat
