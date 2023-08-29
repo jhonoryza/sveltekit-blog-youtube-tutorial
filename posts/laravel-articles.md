@@ -3,6 +3,8 @@ title: 'Collection of nice Laravel Articles'
 date: '2023-08-29 23:45:00'
 ---
 
+this is some collection nice articles about laravel framework
+
 ## Feature
 - [Working with Markdown in PHP](https://ashallendesign.co.uk/blog/working-with-markdown-in-php)
 - [Adding Social Logins to Your Laravel Apps: Twitter and GitHub](https://ashallendesign.co.uk/blog/adding-social-logins-to-your-laravel-apps-twitter-and-github)
