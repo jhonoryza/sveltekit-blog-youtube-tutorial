@@ -159,6 +159,8 @@ vim.g.codeium_no_map_tab = 1
 ```
 
 keymap yg sering dipakai di lazyvim
+
+```
 - space + space -> find file
 - space + ` -> switch between last buffer
 - shift + h or l` -> switch between buffer
@@ -167,6 +169,7 @@ keymap yg sering dipakai di lazyvim
 - space + e -> toggle sidebar
 - shift + > or < -> indent code sebelumnya mesti visual block dlu
 - gcc -> comment bisa dengan visual block
+```
 
 secara default auto format ketika file di save
 
