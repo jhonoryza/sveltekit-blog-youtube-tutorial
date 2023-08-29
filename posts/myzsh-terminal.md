@@ -1,9 +1,9 @@
 ---
 title: 'my zsh terminal configuration'
-date: '2023-08-29 23:45:00'
+date: '2023-08-30 00:07:00'
 ---
 
-this is my zsh terminal configuration
+this is my zsh terminal configuration.
 
 ## required
 
@@ -80,9 +80,10 @@ mv ~/.cache/nvim{,.bak}
 git clone https://github.com/LazyVim/starter ~/.config/nvim
 rm -rf ~/.config/nvim/.git
 nvim
-
 ```
+
 edit colorscheme .config/nvim/lua/plugins/colorscheme.lua
+
 ```lua
 return {
   -- add gruvbox
@@ -108,6 +109,7 @@ untuk intelephense license key buat file `YOUR_HOME_DIR/intelephense/licence.txt
 
 tambahkan `~/.config/nvim/lua/plugins/codeium.lua`, setelah install `:Codeium Auth` ikut petunjuk yg ada
 untuk accept suggestion ctrl+g
+
 ```lua
 return {
   {
@@ -118,6 +120,7 @@ return {
 ```
 
 tambahkan ` ~/.config/nvim/lua/plugins/vimcommenter.lua`, cara melakukan comment/uncomment normal mode `gcc`
+
 ```lua
 return {
   {
@@ -127,6 +130,7 @@ return {
 ```
 
 edit `~/.config/nvim/lua/config/keymaps.lua`
+
 ```lua
 vim.keymap.set("i", "<C-g>", function()
   return vim.fn["codeium#Accept"]()
@@ -149,6 +153,7 @@ vim.keymap.set("n", "gcap", "my<cmd>norm vip<bar>gc<cr>`y")
 ```
 
 edit file `~/.config/nvim/lua/config/options.lua`
+
 ```lua
 vim.g.codeium_no_map_tab = 1
 ```
@@ -166,6 +171,7 @@ keymap yg sering dipakai di lazyvim
 secara default auto format ketika file di save
 
 install lazygit
+
 ```bash
 # on mac
 brew install jesseduffield/lazygit/lazygit
@@ -177,6 +183,7 @@ sudo install lazygit /usr/local/bin
 ```
 
 ## optional jess terminal
+
 ```bash
 apt-get install tmux lua lua-check
 git clone git@github.com:jhonoryza/dotfiles.git
