@@ -53,7 +53,9 @@
         <SunIcon class="block text-zinc-400 dark:hidden" />
       </button>
       <SocialLinks />
-
+      <a href="/rss.xml">
+        <img class="w-4" src="https://i.imgur.com/fZIDSoj.png" alt="Subscribe to My Website">
+      </a>
     </header>
     <main
       class="flex flex-col flex-grow w-full mx-auto font-semibold"

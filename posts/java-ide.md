@@ -8,11 +8,11 @@ Kali ini kita akan membahas beberapa tips yg berguna ketika develop java menggun
 ## cara ubah java version
 1. buka file -> project structure
 
-![image](https://github.com/jhonoryza/sveltekit-blog-youtube-tutorial/assets/5910636/8eaf5ec0-dc4b-44a8-b737-c5f97a88cf22)
+[image](https://github.com/jhonoryza/sveltekit-blog-youtube-tutorial/assets/5910636/8eaf5ec0-dc4b-44a8-b737-c5f97a88cf22)
 
 2. buka preferences -> build execution deployment -> build tools -> gradle
 
-![image](https://github.com/jhonoryza/sveltekit-blog-youtube-tutorial/assets/5910636/bd844504-7bb4-4a3d-94ec-13a2a369f50d)
+[image](https://github.com/jhonoryza/sveltekit-blog-youtube-tutorial/assets/5910636/bd844504-7bb4-4a3d-94ec-13a2a369f50d)
 
 ## postgres application properties
 

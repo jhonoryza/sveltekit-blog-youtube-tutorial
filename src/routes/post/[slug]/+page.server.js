@@ -16,3 +16,13 @@ export async function load({ params }) {
     post
   }
 }
+
+/** @type {import('./$types').EntryGenerator} */
+export function entries() {
+  // return array of object slug from posts
+  return posts.map((post) => {
+    return {
+      slug: post.slug
+    }
+  })
+}

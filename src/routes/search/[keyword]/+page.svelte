@@ -1,5 +1,4 @@
 <script>
-  import Pagination from '$lib/components/Pagination.svelte'
   import PostsList from '$lib/components/PostsList.svelte'
   import SearchPage from '$lib/components/SearchPage.svelte'
   import { bio, name } from '$lib/info.js'
@@ -7,8 +6,6 @@
   /** @type {import('./$types').PageData} */
   export let data
 
-  $: isFirstPage = data.page === 1
-  $: hasNextPage = data.posts[data.posts.length - 1]?.previous
 </script>
 
 <svelte:head>
@@ -20,10 +17,7 @@
   <section class="w-full">
     <SearchPage />
 
-    <Pagination page={data.page} {isFirstPage} {hasNextPage} />
-
     <PostsList posts={data.posts} />
 
-    <Pagination page={data.page} {isFirstPage} {hasNextPage} />
   </section>
 </div>
