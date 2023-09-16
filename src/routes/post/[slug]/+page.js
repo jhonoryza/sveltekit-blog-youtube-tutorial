@@ -20,3 +20,4 @@ export async function load({ data }) {
     }
   }
 }
+export const prerender = false
